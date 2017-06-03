@@ -146,7 +146,7 @@ class OneHotEncoder():
         encoding = self.encoder.transform(categories)
         return [self._get_one_hot_vector(val) for val in encoding]
 
-    def decode(self, one_hot_vectors):
+    def decode_one_hot(self, one_hot_vectors):
         """
         Decodes an array of one-hot vectors into the original categorical values.
 
@@ -155,6 +155,15 @@ class OneHotEncoder():
         """
         decoding = [self._get_category(val) for val in one_hot_vectors]
         return self.encoder.inverse_transform(decoding)
+
+    def decodes_ints(self, ints):
+        """
+        Decodes array of integer into original categorical values.
+
+        Parameters:
+          - ints: Array of ints.
+        """
+        return self.encoder.inverse_transform(ints)
 
 def get_classes(paths):
     """

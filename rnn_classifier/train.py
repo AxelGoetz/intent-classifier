@@ -11,6 +11,14 @@ import preprocessing
 from tensorflow.contrib.rnn import LSTMCell, GRUCell
 from sys import exit
 
+from os import path as ospath
+from sys import path
+
+# Hack to import from sibling directory
+path.append(ospath.dirname(path[0]))
+
+from utils import clean_text, save_object
+
 
 def train(sess, model, data_dir,
                        batch_size=100,
@@ -29,10 +37,9 @@ def train(sess, model, data_dir,
       - max_batches: *(Default 10,000)*.
       - verbose: Whether or not to display extended amount of information *(Default False)*.
     """
-    model.set_summary_writer(sess)
-
     batches = preprocessing.get_batches_for_dir(data_dir, batch_size=batch_size, max_iterations=max_batches)
     onehot_encoder = preprocessing.get_onehot_for_dir(data_dir)
+    save_object.save_object(onehot_encoder, 'onehot_encoder')
 
     try:
         for batch in range(max_batches):
@@ -42,8 +49,9 @@ def train(sess, model, data_dir,
             _, _, summary = sess.run([model.train_op, model.loss, model.merged_summary], fd)
 
             if batch == 0 or batch % batches_in_epoch == 0:
-                model.save(sess, 'rnn_classifier')
                 model.write_summary(summary, batch)
+
+                model.save(sess, 'rnn_classifier')
 
                 if verbose:
                     l, predict_ = sess.run([model.loss, model.prediction], fd)
@@ -51,8 +59,21 @@ def train(sess, model, data_dir,
 
                     for i, (inp, pred) in enumerate(zip(fd[model.targets], predict_)):
                         print('  sample {}:\n'.format(i + 1))
-                        print('    target     > {}\n'.format(inp))
-                        print('    predicted > {}\n'.format(pred))
+
+                        maxi, maxval = 0, 0
+                        for i, val in enumerate(inp):
+                            if val > maxval:
+                                maxi, maxval = i, val
+
+                        print("    Target onehot at: " + str(maxi))
+
+                        maxi, maxval = 0, 0
+                        for i, val in enumerate(pred):
+                            if val > maxval:
+                                maxi, maxval = i, val
+
+                        print("    Prediction onehot at: " + str(maxi) + " with probability " + str(maxval))
+
                         if i >= 2:
                             break
                     print('\n')
@@ -93,12 +114,14 @@ def run_model(data_dir):
                             keep_prob=1,
                             is_training=True)
 
+        model.set_summary_writer(session)
+
 
         session.run(tf.global_variables_initializer())
 
         train(session, model, data_dir,
                                batch_size=100,
-                               batches_in_epoch=100,
+                               batches_in_epoch=500,
                                max_batches=10000,
                                verbose=True)
 

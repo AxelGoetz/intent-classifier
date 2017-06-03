@@ -17,7 +17,7 @@ def loadGlove(path):
     Returns:
       - Dictionary with words as key and vector as value.
     """
-    print("Starting to import GloVe\n")
+    print("Starting to import GloVe")
     f = open(path, 'r')
     model = {}
 

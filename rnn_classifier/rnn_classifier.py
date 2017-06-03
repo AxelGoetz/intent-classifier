@@ -174,7 +174,7 @@ class RNN():
         )
 
         self.loss = tf.reduce_mean(cross_entropy)
-        tf.summary.scalar('loss', self.loss)
+        tf.summary.scalar('Cross entropy loss', self.loss)
 
         # TODO: Which optimizer to use? `GradientDescentOptimizer`, `AdamOptimizer` or `RMSProp`?
         self.train_op = tf.train.AdamOptimizer(self.learning_rate).minimize(self.loss)
@@ -228,7 +228,6 @@ class RNN():
           - file_name: A string that represents the file name
             without the extension.
         """
-
         # Get the graph
         saver = tf.train.Saver()
 
@@ -241,3 +240,4 @@ class RNN():
 
     def write_summary(self, summary, i):
         self.summary_writer.add_summary(summary, i)
+        self.summary_writer.flush()
