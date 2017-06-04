@@ -2,7 +2,7 @@
 Extracts colors from raw text.
 """
 
-from re import search
+from re import findall
 
 hex_regex = '#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})'
 rgb_regex = 'rgba?\([^)]+\)'
@@ -188,7 +188,7 @@ def get_colors(arr):
 
   sentence = " ".join(arr)
 
-  found.extend(re.findall(hex_regex, sentence))
-  found.extend(re.findall(rgb_regex, sentence))
+  found.extend(findall(hex_regex, sentence))
+  found.extend(findall(rgb_regex, sentence))
 
   return found

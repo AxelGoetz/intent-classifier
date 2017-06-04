@@ -15,13 +15,13 @@ Currently extracts the following:
 
 from nltk.chunk import ne_chunk
 from nltk.tree import Tree
-from nltk import pos_tag
+from nltk import pos_tag, word_tokenize
 
 from date_time import get_dates
 from colors import get_colors
 from url import get_urls
 
-def extraction(tokens):
+def extraction(raw_text):
     """
     Performs entity extraction.
 
@@ -35,17 +35,20 @@ def extraction(tokens):
     At the moment, we choose the first option but the code should not be too difficult to change.
 
     Parameters:
-      - tokens: An array of strings/tokens (preferably not cleaned).
+      - raw_text: A string, representing the tokens.
 
     Returns:
       - A dictionary in the format `{entity: [tokens]}`.
     """
+    tokens = word_tokenize(raw_text)
     tagged = pos_tag(tokens)
 
     entities = nltk_extraction(tagged)
     entities['color'] = get_colors(tokens)
-    entities['datetime'] = get_dates(tokens)
-    entities['url'] = get_urls(tokens)
+    entities['datetime'] = get_dates(raw_text)
+    entities['url'] = get_urls(raw_text)
+
+    return dict((k, v) for k, v in entities.items() if v)
 
 
 def nltk_extraction(tagged):
@@ -64,11 +67,21 @@ def nltk_extraction(tagged):
 
     for child in parse_tree:
         if isinstance(child, Tree):
-            string = " ".join(child.leaves)
-            label = child.label.lower()
+            string = " ".join([x[0] for x in child.leaves()])
+            label = child.label().lower()
+
+            if label == 'gpe':
+                label = 'location'
 
             if label not in entities:
                 entities[label] = []
             entities[label].append(string)
 
     return entities
+
+if __name__ == '__main__':
+    while True:
+        raw_text = input("Ask me a question: ")
+
+        entities = extraction(raw_text)
+        print(entities)
