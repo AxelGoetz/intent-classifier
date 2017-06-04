@@ -214,7 +214,7 @@ class RNN():
 
         Parameters:
           - sess
-          - file_name: The file name without the extension.
+          - file_name: The file name (and path) without the extension.
         """
         saver = tf.train.Saver()
         saver.save(sess, file_name)
@@ -234,9 +234,9 @@ class RNN():
         # Restore the variables
         saver.restore(sess, file_name)
 
-    def set_summary_writer(self, sess):
+    def set_summary_writer(self, sess, path):
         self.merged_summary = tf.summary.merge_all()
-        self.summary_writer = tf.summary.FileWriter('./classifier1_logs', sess.graph)
+        self.summary_writer = tf.summary.FileWriter(path, sess.graph)
 
     def write_summary(self, summary, i):
         self.summary_writer.add_summary(summary, i)

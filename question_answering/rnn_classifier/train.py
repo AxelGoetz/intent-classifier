@@ -14,6 +14,8 @@ from sys import exit
 from os import path as ospath
 from sys import path
 
+DIR_NAME, _ = ospath.split(ospath.abspath(__file__))
+
 # Hack to import from sibling directory
 path.append(ospath.dirname(path[0]))
 
@@ -39,7 +41,7 @@ def train(sess, model, data_dir,
     """
     batches = preprocessing.get_batches_for_dir(data_dir, batch_size=batch_size, max_iterations=max_batches)
     onehot_encoder = preprocessing.get_onehot_for_dir(data_dir)
-    save_object.save_object(onehot_encoder, 'onehot_encoder')
+    save_object.save_object(onehot_encoder, DIR_NAME + '/data/onehot_encoder')
 
     try:
         for batch in range(max_batches):
@@ -51,7 +53,7 @@ def train(sess, model, data_dir,
             if batch == 0 or batch % batches_in_epoch == 0:
                 model.write_summary(summary, batch)
 
-                model.save(sess, 'rnn_classifier')
+                model.save(sess, DIR_NAME + '/data/rnn_classifier')
 
                 if verbose:
                     l, predict_ = sess.run([model.loss, model.prediction], fd)
@@ -80,20 +82,17 @@ def train(sess, model, data_dir,
 
     except KeyboardInterrupt:
         print('training interrupted')
-        model.save(sess, 'rnn_classifier')
+        model.save(sess, DIR_NAME + '/data/rnn_classifier')
         exit(0)
 
-    model.save(sess, 'rnn_classifier')
+    model.save(sess, DIR_NAME + '/data/rnn_classifier')
 
 def run_model(data_dir):
     """
     Runs a rnn classifier model.
 
-    @param data is
-        if in_memory == True:
-            ([[size, incoming]], [webpage_label])
-        else:
-            A list of paths
+    Parameters:
+      - data_dir: A string, containing the absolute path to the directory containing the data.
     """
     tf.reset_default_graph()
     tf.set_random_seed(123)
@@ -114,8 +113,7 @@ def run_model(data_dir):
                             keep_prob=1,
                             is_training=True)
 
-        model.set_summary_writer(session)
-
+        model.set_summary_writer(session, DIR_NAME + '/data/classifier1_logs')
 
         session.run(tf.global_variables_initializer())
 
@@ -126,7 +124,7 @@ def run_model(data_dir):
                                verbose=True)
 
 def main(_):
-    run_model('/Users/axelg/Drive/Projects/nlp-classifier/data/classifier_data/')
+    run_model(DIR_NAME + '/../../data/classifier_data/')
 
 if __name__ == '__main__':
     tf.app.run()

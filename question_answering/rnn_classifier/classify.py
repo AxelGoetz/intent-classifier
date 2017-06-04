@@ -20,19 +20,17 @@ path.append(ospath.dirname(path[0]))
 
 from utils import clean_text, word_embedding, save_object
 
-def classify(sess, model, data_dir,
-                       batch_size=1):
+def classify(sess, model, batch_size=1):
     """
     Classify using an existing RNN classifier.
 
     Parameters:
       - sess: A tensorflow session.
       - model: An instance of the `RNN` class.
-      - data_dir: The directory with all of the training data.
       - batch_size: *(Default 1)*.
 
     """
-    onehot_encoder = save_object.load_object(DIR_NAME + '/../onehot_encoder')
+    onehot_encoder = save_object.load_object(DIR_NAME + '/data/onehot_encoder')
 
     while True:
         raw_text = input("Ask me a question: ")
@@ -65,12 +63,6 @@ def classify(sess, model, data_dir,
 def run_model(data_dir):
     """
     Runs a rnn classifier model.
-
-    @param data is
-        if in_memory == True:
-            ([[size, incoming]], [webpage_label])
-        else:
-            A list of paths
     """
     tf.reset_default_graph()
     tf.set_random_seed(123)
@@ -85,7 +77,7 @@ def run_model(data_dir):
                             embedding_size=300,
                             reverse=False,
                             softmax_on_hidden=False,
-                            saved_graph=DIR_NAME + '/../rnn_classifier',
+                            saved_graph=DIR_NAME + '/data/rnn_classifier',
                             sess=session,
                             learning_rate=0.0001,
                             keep_prob=1,
@@ -95,7 +87,7 @@ def run_model(data_dir):
                            batch_size=1)
 
 def main(_):
-    run_model('/Users/axelg/Drive/Projects/nlp-classifier/data/classifier_data/')
+    run_model()
 
 if __name__ == '__main__':
     tf.app.run()

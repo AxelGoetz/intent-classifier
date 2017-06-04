@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/axelg/Drive/Projects/nlp-classifier/question_answering/rnn_classifier/data/rnn_classifier"
+all_model_checkpoint_paths: "/Users/axelg/Drive/Projects/nlp-classifier/question_answering/rnn_classifier/data/rnn_classifier"
