@@ -5,7 +5,7 @@ Currently uses a pretrained GloVe model to embed words into 300d vectors.
 from os import path as ospath
 
 dirname, _ = ospath.split(ospath.abspath(__file__))
-GLOVE_PATH = dirname + '/../data/glove.txt'
+GLOVE_PATH = dirname + '/../../data/glove.txt'
 
 def loadGlove(path):
     """
