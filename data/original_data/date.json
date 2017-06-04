@@ -1,0 +1,17 @@
+{"data": [
+  {"raw_text": "What date is it today?"},
+  {"raw_text": "Date\n\n"},
+  {"raw_text": "What's the date?\n\n"},
+  {"raw_text": "What is the date?"},
+  {"raw_text": "Date"},
+  {"raw_text": "What's the date?"},
+  {"raw_text": "Is it a holiday today?"},
+  {"raw_text": "Today"},
+  {"raw_text": "Show me a datetime object."},
+  {"raw_text": "What date is it?"},
+  {"raw_text": "What day in the month is it?"},
+  {"raw_text": "What year is it?"},
+  {"raw_text": "How long till my birthday?"},
+  {"raw_text": "Tell me what the date is."},
+  {"raw_text": "Do you know the date?"}
+], "intent": "date"}

@@ -1,0 +1,23 @@
+{"data": [
+  {"raw_text": "when was axel born?\n\n"},
+  {"raw_text": "How old?"},
+  {"raw_text": "how old is axel?"},
+  {"raw_text": "when was axel born?"},
+  {"raw_text": "how old is he?"},
+  {"raw_text": "when is he born"},
+  {"raw_text": "How old?"},
+  {"raw_text": "How old is Axel?"},
+  {"raw_text": "How old are you?"},
+  {"raw_text": "How old is axel?"},
+  {"raw_text": "How old is he?"},
+  {"raw_text": "When was Axel born?"},
+  {"raw_text": "What age?"},
+  {"raw_text": "Age"},
+  {"raw_text": "When was Axel born?"},
+  {"raw_text": "What age is Axel?"},
+  {"raw_text": "What is Axel's date of birth?"},
+  {"raw_text": "Is axel 20 years old?"},
+  {"raw_text": "Remind me how old Axel is."},
+  {"raw_text": "Tell me how old Axel is."},
+  {"raw_text": "I demand you to tell me what his age is."}
+], "intent": "age"}

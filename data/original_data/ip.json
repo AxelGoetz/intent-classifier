@@ -1,0 +1,17 @@
+{"data": [
+  {"raw_text": "What is my IP?\n\n"},
+  {"raw_text": "What's my ip?\n\n"},
+  {"raw_text": "What is my ip?\n\n"},
+  {"raw_text": "What's my IP?"},
+  {"raw_text": "What's my public IP?"},
+  {"raw_text": "IP"},
+  {"raw_text": "What is my ipv4 address"},
+  {"raw_text": "What is my address"},
+  {"raw_text": "What is my internet address"},
+  {"raw_text": "Tell me what my public ip is"},
+  {"raw_text": "What is my ip."},
+  {"raw_text": "My internet protocol address"},
+  {"raw_text": "Find my ip address."},
+  {"raw_text": "Do you know my ip address?"},
+  {"raw_text": "I want to know my public ip address."}
+], "intent": "ip"}

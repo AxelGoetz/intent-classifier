@@ -1,0 +1,22 @@
+{"data": [
+  {"raw_text": "What time is it"},
+  {"raw_text": "Time\n\n"},
+  {"raw_text": "what time is it?\n\n"},
+  {"raw_text": "Whats the time?\n\n"},
+  {"raw_text": "What time is it?\n\n"},
+  {"raw_text": "How late is it?"},
+  {"raw_text": "time"},
+  {"raw_text": "What's the time"},
+  {"raw_text": "what time is it?"},
+  {"raw_text": "Tell me what time it is."},
+  {"raw_text": "How late is it?"},
+  {"raw_text": "Do you know the time?"},
+  {"raw_text": "Can you read a clock?"},
+  {"raw_text": "Is it 9 o'clock?"},
+  {"raw_text": "Is it already evening?"},
+  {"raw_text": "What time is it?"},
+  {"raw_text": "Time"},
+  {"raw_text": "Is it morning?"},
+  {"raw_text": "Is it evening?"},
+  {"raw_text": "What time is afternoon?"}
+], "intent": "time"}

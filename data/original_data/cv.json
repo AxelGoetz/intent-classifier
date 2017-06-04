@@ -1,0 +1,22 @@
+{"data": [
+  {"raw_text": "show me axel's cv\n\n"},
+  {"raw_text": "Resume\n\n"},
+  {"raw_text": "Get me axel's resume."},
+  {"raw_text": "CV"},
+  {"raw_text": "Resume"},
+  {"raw_text": "show me axel's cv"},
+  {"raw_text": "Axel's resume."},
+  {"raw_text": "I want work with Axel, what are his qualifications."},
+  {"raw_text": "Qualifications."},
+  {"raw_text": "Tell me where I can find his cv"},
+  {"raw_text": "What are Axel's past experiences."},
+  {"raw_text": "What experience does Axel have?"},
+  {"raw_text": "Do you have a link with Axel's resume?"},
+  {"raw_text": "Where did axel work in the past?"},
+  {"raw_text": "Does Axel have a resume?"},
+  {"raw_text": "Does Axel have a cv?"},
+  {"raw_text": "Do you have a pdf of a resume?"},
+  {"raw_text": "Curriculum vitae"},
+  {"raw_text": "Rundown of axel's capabilities."},
+  {"raw_text": "What languages can axel program in?"}
+], "intent": "cv"}

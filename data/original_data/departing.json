@@ -1,0 +1,17 @@
+{"data": [
+  {"raw_text": "Good bye"},
+  {"raw_text": "See you later"},
+  {"raw_text": "Farewell."},
+  {"raw_text": "Hope you have a good day!"},
+  {"raw_text": "Take care!"},
+  {"raw_text": "Bye"},
+  {"raw_text": "See you soon!"},
+  {"raw_text": "Bye bye!"},
+  {"raw_text": "Later"},
+  {"raw_text": "Talk to you later!"},
+  {"raw_text": "Have a good one!"},
+  {"raw_text": "Peace out!"},
+  {"raw_text": "I'm out"},
+  {"raw_text": "Goodbye, see you later."},
+  {"raw_text": "Bye"}
+], "intent": "departing"}

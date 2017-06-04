@@ -1,0 +1,17 @@
+{"data": [
+  {"raw_text": "Tell me a joke"},
+  {"raw_text": "Knock knock"},
+  {"raw_text": "Why did the chicken cross the road?"},
+  {"raw_text": "joke"},
+  {"raw_text": "Tell me a joke."},
+  {"raw_text": "Do you know any good puns?"},
+  {"raw_text": "Make me laugh"},
+  {"raw_text": "I want to laugh"},
+  {"raw_text": "Do you have any humor?"},
+  {"raw_text": "Pank"},
+  {"raw_text": "Do you know any good jokes?"},
+  {"raw_text": "Tell me a riddle."},
+  {"raw_text": "Make me laugh"},
+  {"raw_text": "Any good one-liners?"},
+  {"raw_text": "Please tell me a joke."}
+], "intent": "joke"}

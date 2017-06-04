@@ -1,0 +1,17 @@
+{"data": [
+  {"raw_text": "I'm sorry"},
+  {"raw_text": "Sorry"},
+  {"raw_text": "I shouldn't have said that."},
+  {"raw_text": "Whoops, sorry!"},
+  {"raw_text": "My bad, I didn't mean to do that."},
+  {"raw_text": "My fault!"},
+  {"raw_text": "Sry!"},
+  {"raw_text": "I apologize"},
+  {"raw_text": "I want to offer you my apology."},
+  {"raw_text": "My mistake!"},
+  {"raw_text": "I had that wrong."},
+  {"raw_text": "I shouldn't have done that!"},
+  {"raw_text": "I want to tell you that I'm sorry."},
+  {"raw_text": "That was wrong of me."},
+  {"raw_text": "Excuse me!"}
+], "intent": "apology"}

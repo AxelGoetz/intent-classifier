@@ -1,0 +1,18 @@
+{"data": [
+  {"raw_text": "/DROP TABLE"},
+  {"raw_text": "<script> console.log('Hello') </script>"},
+  {"raw_text": "<script src='http://gavrilov.co.uk/dans-naughty-script.js' />"},
+  {"raw_text": "<script> console.log('Hello'); </script>"},
+  {"raw_text": "<script?"},
+  {"raw_text": "<script> console.log('cool') </\nscript>"},
+  {"raw_text": "<script> console.log('cool') </ script>"},
+  {"raw_text": "</script>"},
+  {"raw_text": "console.log('Hello world')"},
+  {"raw_text": "Code injection"},
+  {"raw_text": "print('Hello')"},
+  {"raw_text": "DROP TABLE"},
+  {"raw_text": "bobby tables."},
+  {"raw_text": "javascript injection"},
+  {"raw_text": "<p> </p>"},
+  {"raw_text": "<div></div>"}
+], "intent": "code-injection"}
