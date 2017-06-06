@@ -17,9 +17,9 @@ from nltk.chunk import ne_chunk
 from nltk.tree import Tree
 from nltk import pos_tag, word_tokenize
 
-from date_time import get_dates
-from colors import get_colors
-from url import get_urls
+from question_answering.entity_extraction.date_time import get_dates
+from question_answering.entity_extraction.colors import get_colors
+from question_answering.entity_extraction.url import get_urls
 
 def extraction(raw_text):
     """
@@ -44,7 +44,7 @@ def extraction(raw_text):
     tagged = pos_tag(tokens)
 
     entities = nltk_extraction(tagged)
-    entities['color'] = get_colors(tokens)
+    entities['color'] = get_colors(raw_text, tokens)
     entities['datetime'] = get_dates(raw_text)
     entities['url'] = get_urls(raw_text)
 

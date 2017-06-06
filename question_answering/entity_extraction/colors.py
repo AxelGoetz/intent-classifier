@@ -4,7 +4,7 @@ Extracts colors from raw text.
 
 from re import findall
 
-hex_regex = '#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})'
+hex_regex = '(#[A-Fa-f0-9]{6}|#[A-Fa-f0-9]{3})'
 rgb_regex = 'rgba?\([^)]+\)'
 
 CSS_COLOR_NAMES = {
@@ -168,12 +168,13 @@ def is_color(word):
   return (word in CSS_COLOR_NAMES) or (search(hex_regex, word) is not None) or (search(rgb_regex, word) is not None)
 
 
-def get_colors(arr):
+def get_colors(raw_text, arr):
   """
   Given an array of tokens (preferably uncleaned because it still needs to contain brackets etc.),
   returns an array of strings, representing the colors found.
 
   Arguments:
+    - raw_text: A string, containing the unprocessed text from the query.
     - arr: An array of tokens (strings).
 
   Returns:
@@ -186,9 +187,7 @@ def get_colors(arr):
     if token in CSS_COLOR_NAMES:
       found.append(token)
 
-  sentence = " ".join(arr)
-
-  found.extend(findall(hex_regex, sentence))
-  found.extend(findall(rgb_regex, sentence))
+  found.extend(findall(hex_regex, raw_text))
+  found.extend(findall(rgb_regex, raw_text))
 
   return found
