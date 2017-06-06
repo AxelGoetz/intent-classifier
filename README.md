@@ -4,7 +4,7 @@ A small test to check how difficult it is to write an intent classifier with an 
 
 ## Setup
 
-All of the code was only tested using Python 3.6.
+All of the code was only tested using Python 3.6 so I'd recommend using it as well.
 Before starting, setup a virtual environment and within that environment, install the dependencies:
 
 ```
