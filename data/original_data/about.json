@@ -21,5 +21,13 @@
   {"raw_text": "Remind me again who Axel is."},
   {"raw_text": "Is this Axel?"},
   {"raw_text": "What does Axel do in his daily live?"},
-  {"raw_text": "Who's website is this?"}
+  {"raw_text": "Who's website is this?"},
+  {"raw_text": "Who created this website?"},
+  {"raw_text": "Tell me something about Axel."},
+  {"raw_text": "About"},
+  {"raw_text": "Who is axel?"},
+  {"raw_text": "Who is axel?"},
+  {"raw_text": "About"},
+  {"raw_text": "What do I need to know about Axel?"},
+  {"raw_text": "Does Axel work already?"}
 ], "intent": "about"}

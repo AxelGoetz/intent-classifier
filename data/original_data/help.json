@@ -27,5 +27,10 @@
   {"raw_text": "What do I do?"},
   {"raw_text": "I don't know what to do."},
   {"raw_text": "Can you answer my questions?"},
-  {"raw_text": "Pleaaaase help."}
+  {"raw_text": "Pleaaaase help."},
+  {"raw_text": "Haha I have no clue as to what I'm doing"},
+  {"raw_text": "I really need help."},
+  {"raw_text": "I want to know what I can do"},
+  {"raw_text": "I am completely lost"},
+  {"raw_text": "Lost"}
 ], "intent": "help"}

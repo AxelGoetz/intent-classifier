@@ -12,5 +12,7 @@
   {"raw_text": "How is axel going to change the future?"},
   {"raw_text": "In the future, what is he going to do?"},
   {"raw_text": "Does Axel have future plans?"},
-  {"raw_text": "Tell me what Axel aspires to be."}
+  {"raw_text": "Tell me what Axel aspires to be."},
+  {"raw_text": "What does he want to be?"},
+  {"raw_text": "What does he want to do?"}
 ], "intent": "aspirations"}

@@ -28,5 +28,9 @@
   {"raw_text": "Howdy."},
   {"raw_text": "Are you doing alright?"},
   {"raw_text": "How are you?"},
-  {"raw_text": "Good day."}
+  {"raw_text": "Good day."},
+  {"raw_text": "How are you doing?"},
+  {"raw_text": "How you doing?"},
+  {"raw_text": "You alright?"},
+  {"raw_text": "How u doing?"}
 ], "intent": "welcome"}

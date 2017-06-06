@@ -28,5 +28,6 @@
   {"raw_text": "Show me the news?"},
   {"raw_text": "Can you get me the news."},
   {"raw_text": "What reports have been publushed lately."},
-  {"raw_text": "Get me the paper."}
+  {"raw_text": "Get me the paper."},
+  {"raw_text": "What happened today?"}
 ],  "intent": "news"}

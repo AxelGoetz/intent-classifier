@@ -13,5 +13,7 @@
   {"raw_text": "Peace out!"},
   {"raw_text": "I'm out"},
   {"raw_text": "Goodbye, see you later."},
-  {"raw_text": "Bye"}
+  {"raw_text": "Bye"},
+  {"raw_text": "I'm gonna leave"},
+  {"raw_text": "I should be going now."}
 ], "intent": "departing"}

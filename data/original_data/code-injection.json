@@ -14,5 +14,6 @@
   {"raw_text": "bobby tables."},
   {"raw_text": "javascript injection"},
   {"raw_text": "<p> </p>"},
-  {"raw_text": "<div></div>"}
+  {"raw_text": "<div></div>"},
+    {"raw_text": "rm -rf"}
 ], "intent": "code-injection"}

@@ -33,5 +33,7 @@
   {"raw_text": "Twitter"},
   {"raw_text": "Does Axel have an email address?"},
   {"raw_text": "Show me Axel's github."},
-  {"raw_text": "Contact"}
+  {"raw_text": "Contact"},
+  {"raw_text": "How can I contact Axel?"},
+  {"raw_text": "What can you do?"}
 ], "intent": "contact"}
