@@ -17,12 +17,11 @@ Padding will be a 0 vector.
 """
 
 import tensorflow as tf
-import preprocessing
+import question_answering.rnn_classifier.preprocessing as preprocessing
 
 class RNN():
     """
     Implements a RNN with a softmax on top of it to perform intent classification in Tensorflow.
-
     """
 
     def __init__(self, rnn_cell, num_classes, batch_size=100, embedding_size=300,
@@ -182,7 +181,7 @@ class RNN():
 
     def next_batch(self, batches, onehot_encoder):
         """
-        Returns the next training mini-batch.
+        Returns the next mini-batch.
 
         Parameters:
           - batches: An iterator with all of the mini-batches

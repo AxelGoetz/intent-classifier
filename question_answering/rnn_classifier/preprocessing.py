@@ -8,12 +8,7 @@ Performs any necesarry data preprocessing such as:
 import numpy as np
 
 from sklearn import preprocessing
-from os import path as ospath
-from sys import path
-
-# Hack to import from sibling directory
-path.append(ospath.dirname(path[0]))
-from utils import files
+from question_answering.utils import files
 
 def get_batches(paths, batch_size=100, max_iterations=10000):
     """

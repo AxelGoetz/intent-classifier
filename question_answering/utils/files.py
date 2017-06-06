@@ -4,8 +4,11 @@ Reading and manipulating files.
 
 import json
 
-from os import scandir, makedirs, path as ospath
-
+try:
+    from os import scandir, makedirs, path as ospath
+except ImportError:
+    pass
+    
 def get_files(data_dir, extension):
     """
     Gets all the files in a directory.

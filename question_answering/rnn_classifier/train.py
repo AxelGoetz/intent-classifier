@@ -5,22 +5,16 @@ Training the RNN Classifier.
 import tensorflow as tf
 import numpy as np
 
-import rnn_classifier
-import preprocessing
+import question_answering.rnn_classifier.rnn_classifier as rnn_classifier
+import question_answering.rnn_classifier.preprocessing as preprocessing
+from question_answering.utils import clean_text, save_object
 
 from tensorflow.contrib.rnn import LSTMCell, GRUCell
 from sys import exit
 
 from os import path as ospath
-from sys import path
 
 DIR_NAME, _ = ospath.split(ospath.abspath(__file__))
-
-# Hack to import from sibling directory
-path.append(ospath.dirname(path[0]))
-
-from utils import clean_text, save_object
-
 
 def train(sess, model, data_dir,
                        batch_size=100,
@@ -102,7 +96,7 @@ def run_model(data_dir):
 
     with tf.Session() as session:
 
-        model = rnn_classifier.RNN(LSTMCell(300), 24,
+        model = rnn_classifier.RNN(LSTMCell(300), 26,
                             batch_size=100,
                             embedding_size=300,
                             reverse=False,
